@@ -1,0 +1,56 @@
+<div class="tarjeta">
+    <div class="contenedor">
+        <div class="login">
+            <div class="arriba">
+                <div class="cerrar"><div  class="container-boton"  routerLink=""><img src="../../../assets/x.png" width="25px" height="25px"></div></div>
+                <div class="abc">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+            <div class="form">
+                <form [formGroup]="form" #f="ngForm" (ngSubmit)="onSignUp()" novalidate>
+                    <div class="label-container">
+                        <label>Nombre:</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="name" name="name" [(ngModel)]="name" required formControlName="name" type="text" [ngClass]="{'is-invalid' : Name?.errors && Name?.touched, 'is-valid': !Name?.errors && Name?.touched}">
+                    </div>
+                    <div class="error-container" *ngIf="Name?.errors && Name?.touched">
+                        <p class="error" *ngIf="Name?.hasError('required')">El nombre es requerido</p>
+                    </div>
+                    <div class="label-container">
+                        <label>Email:</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="email" name="email" [(ngModel)]="email" required formControlName="email" type="email" [ngClass]="{'is-invalid' : Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
+                    </div>
+                    <div class="error-container" *ngIf="Email?.errors && Email?.touched">
+                        <p class="error" *ngIf="Email?.hasError('required')">El email es requerido</p>
+                        <p  class="error" *ngIf="Email?.hasError('email')">Debe ingresar un email valido</p>
+                    </div>
+                    <div class="label-container">
+                        <label>Usuario:</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required formControlName="username" type="text" [ngClass]="{'is-invalid' : Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
+                    </div>
+                    <div class="error-container" *ngIf="Username?.errors && Username?.touched">
+                        <p class="error" *ngIf="Username?.hasError('required')">El usuario es requerido</p>
+                    </div>
+                    <div class="label-container"
+                    ><label>Contraseña:</label>
+                </div>
+                    <div class="input-container">
+                        <input id="password" name="password" [(ngModel)]="password" required formControlName="password" type="password" [ngClass]="{'is-invalid' : Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+                    </div>
+                    <div class="error-container" *ngIf="Password?.errors && Password?.touched">
+                        <p class="error" *ngIf="Password?.hasError('required')">La contraseña es requerida</p>
+                        <p class="error" *ngIf="form.controls['password'].hasError('minlength')">La contraseña debe ser de 4 o mas caracteres</p>
+                    </div>
+                    <div class="submit-container"><button id="submit" type="submit">Registrarse</button></div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

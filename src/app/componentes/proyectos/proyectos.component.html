@@ -1,0 +1,28 @@
+<div class="proyectos" id="proyectos">
+    <div id="blancos"></div>
+    <h3>Proyectos</h3>
+    <div class="agregar">
+        <i class="fa-solid fa-plus" routerLink="/newproyecto" *ngIf="isLogged"></i>
+    </div>
+</div>
+<div class="c">
+    <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let pro of proyecto">
+            <div class="wrapper">
+                <a href="{{pro.link}}"><img src="{{pro.img == '' ? '../../../../../assets/error-404.jpg' : pro.img}}" alt="{{pro.descripcion}}"></a>
+            </div>
+            <div class="carousel-caption">
+                <h3>{{ pro.nombre }}</h3>
+                <p>{{ pro.descripcion }}</p>
+                <div class="admin">
+                    <div class="edit">
+                        <i class="fa-solid fa-pen-to-square" routerLink="/editproyecto/{{pro.id}}" *ngIf="isLogged"></i>
+                    </div>
+                    <div class="eliminar">
+                        <i class="fa-solid fa-trash" (click)="delete(pro.id)" *ngIf="isLogged"></i>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>

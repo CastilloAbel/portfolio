@@ -1,0 +1,28 @@
+<div class="skills" id="skills">
+    <div id="blancos"></div>
+    <h3>Habilidades</h3>
+    <div class="agregar">
+        <i class="fa-solid fa-plus" routerLink="/newskill" *ngIf="isLogged"></i>
+    </div>
+</div>
+<div class="cont">
+    <div *ngFor="let hab of habilidad" class="cont-fila">
+        <div *ngIf="habilidad[0].id == hab.id" class="columnas">
+            <div class="hab prim">Nombre</div>
+            <div class="hab prim">Nivel</div>
+            <div class="hab prim edit-column" *ngIf="isLogged">Editar</div>
+            <div class="hab prim delete-column" *ngIf="isLogged">Eliminar</div>
+        </div>
+        <div class="fila">
+            <div class="hab">{{hab.nombre}}</div>
+            <div class="barra"><progress max="100" value="{{hab.porcentaje}}"></progress></div>
+            <div class="edit" *ngIf="isLogged">
+                <i class="fa-solid fa-pen-to-square" (click)="editar(hab.id)" *ngIf="isLogged"></i>
+            </div>
+            <div class="eliminar" *ngIf="isLogged">
+                <i class="fa-solid fa-trash" (click)="delete(hab.id)" *ngIf="isLogged"></i>
+            </div>
+        </div>
+
+    </div>
+</div>

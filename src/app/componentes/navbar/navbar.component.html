@@ -1,0 +1,29 @@
+
+<header class="c">
+    <nav class="n">
+        <div class="ul-container">
+            <ul class="nav_ul">
+                <li class="nav_li animated bounce"><i class="fa-solid fa-address-card"></i><a href="#sobremi">Sobre Mi</a></li>
+                <li class="nav_li animated bounce"><i class="fa-solid fa-code"></i><a href="#skills">Habilidades</a></li>
+                <li class="nav_li animated bounce"><i class="fa-solid fa-terminal"></i><a href="#proyectos">Proyectos</a></li>
+                <li class="nav_li animated bounce"><i class="fa-solid fa-book"></i><a href="#educacion">Educacion</a></li>
+                <li class="nav_li animated bounce"><i class="fa-solid fa-briefcase"></i><a href="#experiencia">Experiencia</a></li>
+                <li class="nav_li animated bounce"><i class="fa-solid fa-phone"></i><a href="#contacto">Contacto</a></li>
+            </ul>
+            <ul class="nav_ul">
+                <li class="nav_li animated bounce"><i class="fa-brands fa-linkedin"></i><a href="{{persona.linkedin === '' ? 'https://www.linkedin.com/' : persona.linkedin}}">Linkedin</a></li>
+                <li class="nav_li animated bounce"><i class="fa-brands fa-github"></i><a href="{{persona.github === '' ? 'https://github.com/' : persona.github}}">Github</a></li>
+            </ul>
+        </div>
+        <div class="responsive-div" (click)="menu.tocarMenu()">
+            <i class="fas fa-bars"></i>
+            <p>Menu</p>
+        </div>
+
+        <div class="div-button">
+            <button (click)="irLogin()" *ngIf="!isLogged">Iniciar Sesion</button>
+            <button (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
+        </div>
+    </nav>
+</header>
+<app-menu *ngIf="menu.isAbierto"></app-menu>

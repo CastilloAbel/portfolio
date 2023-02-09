@@ -1,0 +1,24 @@
+<div class="espacio"></div>
+<div class="franja"></div>
+<div class="c">
+    <div class="container-foto">
+        <div class="foto">
+            <img src="{{persona.img}}" alt="">
+        </div>
+    </div>
+    <div class="principal">
+    <h1 class="name">{{persona.nombre}} {{persona.apellido}}</h1>
+    <h2><mark>{{persona.puesto}}</mark></h2>
+
+    </div>
+</div>
+<div class="perfil" id="sobremi">
+    <div id="blancos"></div>
+    <h3>Perfil</h3>
+    <div class="edit">
+        <i class="fa-solid fa-pen-to-square" routerLink="/editsobremi/{{persona.id}}" *ngIf="isLogged"></i>
+    </div>
+</div>
+<div class="text">
+    <p id="text">{{persona.descripcion}}</p>
+</div>

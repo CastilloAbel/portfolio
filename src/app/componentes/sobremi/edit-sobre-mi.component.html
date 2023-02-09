@@ -1,0 +1,71 @@
+<div class="tarjeta">
+    <div class="contenedor">
+        <div class="form">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="label-container" id="primero">
+                    <label for="nombre">Nombre:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="nombre" name="nombre" [(ngModel)]="per.nombre" required>
+                </div>
+                <div class="label-container">
+                    <label for="apellido">Apellido:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="apellido" name="apellido" [(ngModel)]="per.apellido" required>
+                </div>
+                <div class="label-container">
+                    <label for="descripcion">Descripcion:</label>
+                </div>
+                <div class="input-container">
+                    <input type="textarea" id="descripcion" name="descripcion" [(ngModel)]="per.descripcion" required>
+                </div>
+                <div class="label-container">
+                    <label for="puesto">Cargo:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="puesto" name="puesto" [(ngModel)]="per.puesto" required>
+                </div>
+                <div class="label-container">
+                    <label for="img">img:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="img" name="img" [(ngModel)]="per.img" required>
+                </div>
+                <div class="label-container">
+                    <label for="github">Github:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="github" name="github" [(ngModel)]="per.github" required>
+                </div>
+                <div class="label-container">
+                    <label for="linkedin">Linkedin:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="linkedin" name="linkedin" [(ngModel)]="per.linkedin" required>
+                </div>
+                <div class="label-container">
+                    <label for="mail">Email:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="mail" name="mail" [(ngModel)]="per.mail" required>
+                </div>
+                <div class="label-container">
+                    <label for="telefono">Telefono:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="telefono" name="telefono" [(ngModel)]="per.telefono" required>
+                </div>
+                <div class="label-container">
+                    <label for="ubicacion">Direccion:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="ubicacion" name="ubicacion" [(ngModel)]="per.ubicacion" required>
+                </div>
+                <div class="submit-container">
+                    <button id="submit">Actualizar Persona</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

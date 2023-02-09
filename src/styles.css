@@ -1,0 +1,17 @@
+*{
+    font-family: "Comfortaa",cursive;
+}
+body{
+    margin: 0;
+    font-family: "Julius Sans One",sans-serif;
+}
+#favicon{
+    width: 32px;
+    height: 32px;
+
+}
+@media only screen and (max-width:1100px){
+    *{
+        font-family: "Itim", cursive;
+    }
+}

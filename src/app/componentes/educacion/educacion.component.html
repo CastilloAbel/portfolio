@@ -1,0 +1,29 @@
+<div class="educacion" id="educacion">
+    <div id="blancos"></div>
+    <h3>Educacion</h3>
+    <div class="agregar">
+        <i class="fa-solid fa-plus" routerLink="/newestudio" *ngIf="isLogged"></i>
+    </div>
+</div>
+<div class="c">
+<div class="text">
+    <div *ngFor="let est of estudio" class="estudios">
+        <div class="estudio">
+            <div class="datos">
+            <h3><i><u>{{est.nombreE}}</u></i></h3>
+            <p>{{est.descripcionE}}</p>
+            <p>{{est.institucion}}</p>
+            <p>{{est.fechaDesde}} - {{est.fechaHasta}}</p>
+        </div>
+        <div class="botones">
+            <div class="edit" *ngIf="isLogged">
+                <i class="fa-solid fa-pen-to-square" routerLink="/editestudio/{{est.id}}" ></i>
+            </div>
+            <div class="eliminar" *ngIf="isLogged">
+                <i class="fa-solid fa-trash" (click)="delete(est.id)" ></i>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>

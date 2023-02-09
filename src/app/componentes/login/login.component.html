@@ -1,0 +1,51 @@
+<div class="tarjeta">
+    <div class="contenedor">
+        <div class="login">
+            <div class="arriba">
+                <div class="cerrar">
+                    <div class="container-boton" (click)="actualizarLogin()"><img src="../../../assets/x.png"
+                            width="25px" height="25px"></div>
+                </div>
+                <div class="abc">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+            </div>
+            <div class="form">
+                <form [formGroup]="form" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                    <div class="label-container">
+                        <label>Usuario:</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required
+                            formControlName="username" type="text" placeholder="Ingrese un nombre de usuario"
+                            [ngClass]="{'user-is-invalid' : Username?.errors && Username?.touched, 'user-is-valid': !Username?.errors && Username?.touched}">
+                    </div>
+                    <div class="error-container" *ngIf="Username?.errors && Username?.touched">
+                        <p class="error" *ngIf="Username?.hasError('required')">El usuario es requerido</p>
+                    </div>
+                    <div class="label-container"><label>Contraseña:</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="password" name="password" [(ngModel)]="password" required formControlName="password"
+                            type="password" placeholder="Ingrese una contraseña"
+                            [ngClass]="{'pass-is-invalid' : Password?.errors && Password?.touched, 'pass-is-valid': !Password?.errors && Password?.touched}">
+                    </div>
+                    <div  class="error-container" *ngIf="Password?.errors && Password?.touched">
+                        <p class="error" *ngIf="Password?.hasError('required')">La contraseña es requerida</p>
+                        <p class="error" *ngIf="form.controls['password'].hasError('minlength')">La contraseña debe ser de 4 o mas
+                            caracteres</p>
+                    </div>
+                    <div class="submit-container"><button id="submit" type="submit">Iniciar Sesion</button></div>
+                </form>
+            </div>
+            <div class="signup">
+                <p>¿No tienes una cuenta?</p>
+                <li class="signup-li">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <a routerLink="/signup">Registrarse</a>
+                </li>
+                
+            </div>
+        </div>
+    </div>
+</div>

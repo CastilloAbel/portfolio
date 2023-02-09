@@ -1,0 +1,85 @@
+.proyectos{
+    width: 100%;
+    display: flex;
+    background-color: rgb(62, 182, 187);
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+#blancos{
+    background-color: rgb(30, 43, 57);
+    height: 40px;
+    margin: 10px;
+    width: 10px;
+}
+.text{
+    display: flex;
+    background-color: rgb(62, 182, 187);
+    height: auto;
+    width: 100%;
+}
+#text{
+    margin: 10px;
+}
+.edit, .agregar, .eliminar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+.edit i, .agregar i, .eliminar i{
+    color: #000;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+
+
+}
+.edit i:hover, .agregar i:hover, .eliminar i:hover{
+    color: #bbb;
+}
+
+.c{
+    margin-top: -70px;
+    height: auto;
+    width: 100%;
+    background-color: rgb(62, 182, 187);
+}
+
+ngb-carousel {
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+ngb-carousel img {
+    padding: 20px;
+    width: 100%;
+    outline: none;
+}
+
+ngb-carousel {
+    width: inherit;
+    height: inherit;
+}
+.carousel-caption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.admin{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+h3, p{
+    color: rgb(30, 43, 57);
+}

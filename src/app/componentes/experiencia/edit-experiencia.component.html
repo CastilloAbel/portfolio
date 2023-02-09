@@ -1,0 +1,41 @@
+<div class="tarjeta">
+    <div class="contenedor">
+        <div class="form">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="label-container" id="primero">
+                    <label for="nombreE">Nombre de la experiencia</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="nombreE" name="nombreE" [(ngModel)]="exp.nombreE" required>
+                </div>
+                <div class="label-container">
+                    <label for="descripcionE">Cargo de la experiencia:</label>
+                </div>
+                <div class="input-container">
+                    <input type="textarea" id="descripcionE" name="descripcionE" [(ngModel)]="exp.descripcionE" required>
+                </div>
+                <div class="label-container">
+                    <label for="institucion">Nombre de la empresa:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="institucion" name="institucion" [(ngModel)]="exp.institucion" required>
+                </div>
+                <div class="label-container">
+                    <label for="fechaDesde">Fecha desde que se realizo la experiencia:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="FechaDesde" name="fechaDesde" [(ngModel)]="exp.fechaDesde" required>
+                </div>
+                <div class="label-container">
+                    <label for="fechaHasta">Fecha de finalizacion de la experiencia:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="fechaHasta" name="fechaHasta" [(ngModel)]="exp.fechaHasta" required>
+                </div>
+                <div class="submit-container">
+                    <button id="submit">Actualizar Experiencia</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

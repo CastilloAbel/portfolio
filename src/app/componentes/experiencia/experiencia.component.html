@@ -1,0 +1,30 @@
+
+    <div class="experiencia" id="experiencia">
+        <div id="blancos"></div>
+        <h3>Experiencia</h3>
+        <div class="agregar">
+            <i class="fa-solid fa-plus" routerLink="/nuevaexp" *ngIf="isLogged"></i>
+        </div>
+    </div>
+<div class="c">
+    <div class="text">
+        <div *ngFor="let exp of experiencia" class="trabajos">
+            <div class="trabajo">
+                <div class="datos">
+                <h3><i><u>{{exp.nombreE}}</u></i></h3>
+                <p>{{exp.descripcionE}}</p>
+                <p>{{exp.institucion}}</p>
+                <p>{{exp.fechaDesde}} - {{exp.fechaHasta}}</p>
+            </div>
+            <div class="botones">
+                <div class="edit" *ngIf="isLogged">
+                    <i class="fa-solid fa-pen-to-square" routerLink="/editexp/{{exp.id}}" ></i>
+                </div>
+                <div class="eliminar" *ngIf="isLogged">
+                    <i class="fa-solid fa-trash" (click)="delete(exp.id)" ></i>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>

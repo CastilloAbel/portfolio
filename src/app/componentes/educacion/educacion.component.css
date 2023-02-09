@@ -1,0 +1,86 @@
+.educacion{
+    width: 100%;
+    display: flex;
+    box-sizing: content-box;
+    background-color: rgb(62, 182, 187);
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -70px;
+}
+#blancos{
+    background-color: rgb(30, 43, 57);
+    height: 40px;
+    margin: 10px;
+    width: 10px;
+}
+#text{
+    margin: 10px;
+}
+.edit, .eliminar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 60px;
+    width: 100px;
+    margin-left: 5px;
+}
+.agregar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    width: 100px;
+    margin-left: 5px;
+}
+.edit i, .agregar i, .eliminar i{
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+
+
+}
+.edit i:hover, .agregar i:hover, .eliminar i:hover{
+    color: #bbb;
+}
+h1, h2 , h3, p{
+    color: #fff;
+}
+.c{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    padding: 40px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px 20px;
+    background-color: rgb(62, 182, 187);
+}
+
+.estudios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 3px dashed rgb(30, 43, 57);
+    border-radius: 15px;
+
+}
+.estudio{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+h3, p{
+    color: rgb(30, 43, 57);
+}

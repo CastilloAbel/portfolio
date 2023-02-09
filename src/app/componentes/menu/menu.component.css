@@ -1,0 +1,64 @@
+.nav_li-container{
+    background-color: rgb(24, 35, 48);
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+.ul-container{
+    margin-left: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nav_responsive-li{
+    margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 9px;
+width: 100%;
+}
+.nav_responsive-li i{
+color: #fff;
+box-sizing: border-box;
+margin-right: 5px;
+}
+.nav_responsive-li a{
+color: #fff;
+text-decoration: none;
+}
+.nav_responsive-li:hover>a {
+    color: #bbb;
+
+}
+
+.nav_responsive-li:hover {
+    color: #bbb;
+}
+.raya-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.raya{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.raya i {
+    width: 60px;
+    height: 8px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.raya i:hover{
+    background-color: #bbb;
+    cursor: pointer;
+}

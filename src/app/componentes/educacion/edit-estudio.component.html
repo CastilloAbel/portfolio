@@ -1,0 +1,41 @@
+<div class="tarjeta">
+    <div class="contenedor">
+        <div class="form">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="label-container" id="primero">
+                    <label for="nombreE">Nombre del estudio:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="nombreE" name="nombreE" [(ngModel)]="est.nombreE" required>
+                </div>
+                <div class="label-container">
+                    <label for="descripcionE">Tipo de estudio:</label>
+                </div>
+                <div class="input-container">
+                    <input type="textarea" id="descripcionE" name="descripcionE" [(ngModel)]="est.descripcionE" required>
+                </div>
+                <div class="label-container">
+                    <label for="institucion">Nombre de la institucion:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="institucion" name="institucion" [(ngModel)]="est.institucion" required>
+                </div>
+                <div class="label-container">
+                    <label for="fechaDesde">Fecha desde que se realizo el estudio:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="FechaDesde" name="fechaDesde" [(ngModel)]="est.fechaDesde" required>
+                </div>
+                <div class="label-container">
+                    <label for="fechaHasta">Fecha de finalizacion del estudio:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="fechaHasta" name="fechaHasta" [(ngModel)]="est.fechaHasta" required>
+                </div>
+                <div class="submit-container">
+                    <button id="submit">Actualizar Estudio</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

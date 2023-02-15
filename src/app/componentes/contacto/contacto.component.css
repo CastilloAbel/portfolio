@@ -75,7 +75,7 @@ img:hover{
 }
 .row2{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: auto;
     width: 100%;
@@ -85,6 +85,9 @@ img:hover{
     flex-grow: 1;
     justify-content: space-around;
     align-items: center;
+}
+.ul-container a{
+    text-decoration: none;
 }
 .li{
     display: flex;
@@ -113,6 +116,16 @@ img:hover{
     margin-top: 10px;
     color: #000;
     box-sizing: border-box;
+}
+#cv:hover{
+    cursor: pointer;
+}
+#cv i:hover{
+    background-color: #aaa;
+    color: #fff;
+}
+#cv p:hover{
+    color: #aaa;
 }
 @media only screen and (max-width:1100px){
     .franja{

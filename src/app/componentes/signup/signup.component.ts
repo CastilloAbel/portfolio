@@ -33,7 +33,8 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    alert("Lo siento. El registro ha sido deshabilitado temporalmente.");
+    this.router.navigate([""])
   }
   onSignUp():void{
     this.user = new NuevoUsuario(this.name, this.nombreUsuario, this.email, this.password);

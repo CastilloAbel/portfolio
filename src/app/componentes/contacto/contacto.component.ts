@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/servicios/persona.service';
@@ -18,5 +19,4 @@ export class ContactoComponent implements OnInit {
   })
 
 }
-
 }

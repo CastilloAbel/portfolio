@@ -35,9 +35,10 @@
     border-radius: 150%;
 }
 .foto img{
-    height: 131.53px;
-    width: 196.92px;
-    border-radius: 200px;
+    width:200px;
+    height:200px;
+    border-radius:150px;
+    border: rgb(30, 43, 57) solid 5px;
 }
 mark{
     background-color: rgb(30, 43, 57);

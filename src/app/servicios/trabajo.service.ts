@@ -8,7 +8,7 @@ import { trabajo } from '../model/trabajo.model';
   providedIn: 'root'
 })
 export class TrabajoService {
-  URL = 'https://monetary-druci-castillokevabel.koyeb.app/trabajos/'
+  URL = 'https://thoughtless-livvie-castillokevabel.koyeb.app/trabajos/'
 
   constructor(private http: HttpClient) { }
 

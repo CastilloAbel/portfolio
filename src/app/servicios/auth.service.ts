@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://monetary-druci-castillokevabel.koyeb.app/auth/'
+  authURL = 'https://thoughtless-livvie-castillokevabel.koyeb.app/auth/'
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario):Observable<any>{

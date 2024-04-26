@@ -7,7 +7,7 @@ import { habilidad } from '../model/habilidad.model';
   providedIn: 'root'
 })
 export class HabilidadService {
-  URL = 'https://monetary-druci-castillokevabel.koyeb.app/skill/'
+  URL = 'https://thoughtless-livvie-castillokevabel.koyeb.app/skill/'
   constructor(private http: HttpClient) { }
 
   public getHabilidad():Observable<habilidad[]>{

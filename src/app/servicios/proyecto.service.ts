@@ -7,7 +7,7 @@ import { proyecto } from '../model/proyecto.model';
   providedIn: 'root'
 })
 export class ProyectoService {
-  URL = 'https://monetary-druci-castillokevabel.koyeb.app/proyectos/'
+  URL = 'https://thoughtless-livvie-castillokevabel.koyeb.app/proyectos/'
   constructor(private http:HttpClient) { }
   public getProyecto():Observable<proyecto[]>{
     return this.http.get<proyecto[]>(this.URL + 'traer');

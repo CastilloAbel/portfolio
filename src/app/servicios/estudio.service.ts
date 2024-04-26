@@ -7,7 +7,7 @@ import { estudio } from '../model/estudio.model';
   providedIn: 'root'
 })
 export class EstudioService {
-  URL = 'https://monetary-druci-castillokevabel.koyeb.app/estudio/'
+  URL = 'https://thoughtless-livvie-castillokevabel.koyeb.app/estudio/'
   constructor(private http:HttpClient) { }
 
   public getEstudio():Observable<estudio[]>{
